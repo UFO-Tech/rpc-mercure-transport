@@ -1,0 +1,17 @@
+parameters:
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire:      true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    Ufo\RpcMercure\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/RpcMercureBundle.php'
+
+    Ufo\RpcMercure\Services\RpcSocketTransport:
+        arguments:
+            $tokenProvider: '@mercure.hub.default.jwt.provider'

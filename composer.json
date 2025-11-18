@@ -1,0 +1,45 @@
+{
+    "name": "ufo-tech/rpc-mercure-transport",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "description": "Mercure transport layer for JSON-RPC event broadcasting between services.",
+    "type": "component",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ufo\\RpcMercure\\": "src/",
+            "Ufo\\RpcMercureTest\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.3",
+        "symfony/mercure-bundle": "^0.3.7",
+        "symfony/messenger": "^7.2",
+        "symfony/event-dispatcher": "^7.2",
+        "ufo-tech/json-rpc-bundle": "^9.1"
+    },
+    "require-dev": {
+        "symfony/framework-bundle": "^7.2",
+        "symfony/http-kernel": "^7.2",
+        "phpunit/phpunit": "^11.0"
+    },
+    "authors": [
+        {
+            "name": "Alex Maystrenko",
+            "email": "ashterix69@gmail.com"
+        }
+    ],
+    "prefer-stable": true,
+    "suggest": {
+        "symfony/http-client": "To publish events asynchronously via Mercure"
+    },
+    "keywords": [
+        "json-rpc",
+        "rpc",
+        "mercure",
+        "transport",
+        "event",
+        "broadcast",
+        "ufo-tech"
+    ]
+}
